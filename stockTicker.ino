@@ -5,8 +5,8 @@
 
 const bool debug = 0;
 
-const char* ssid = "Fake Business";
-const char* pass = "fakebusiness";
+const char* ssid = "****";
+const char* pass = "****";
 const char* host = "cloud.iexapis.com";
 const char* timeHost = "worldtimeapi.org";
 
@@ -79,7 +79,7 @@ void setupWifi(){
 
 void refresh(String symbol){
   Serial.println("Refreshing: " + symbol);
-  String url = "/stable/stock/"+ String(symbol) +"/quote?token=pk_acdb4c3487434160817571a321247950&filter=latestPrice,%20changePercent";
+  String url = "/stable/stock/"+ String(symbol) +"/quote?token=**********&filter=latestPrice,%20changePercent";
   WiFiClientSecure client;
   client.setInsecure();
   if(client.connect(host, 443)){
